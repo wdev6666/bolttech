@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const { db } = require("./config/db");
 
 const userRouter = require("./routes/user.route");
@@ -9,7 +10,9 @@ const taskRouter = require("./routes/task.route");
 const port = 3001;
 
 const app = express();
-app.use(express.static(__dirname + "/static"));
+
+app.use(express.static(path.join(__dirname,"../frontend/build")));
+	
 app.use(express.json());
 app.use(cors());
 
