@@ -41,7 +41,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node app",
+    "start": "node backend",
 	"backend": "nodemon",
 	"frontend": "npm start --prefix frontend",
 	"dev": "concurrently \"npm run backend\" \"npm run frontend\"",
